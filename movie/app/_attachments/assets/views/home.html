@@ -1,0 +1,12 @@
+<div class='jumbotron'>
+  <h1 class="display-3">movieApp</h1>
+  <p class='lead'>
+  	<label for='ActorText'>Geef Acteur :</label>
+  	<input ng-model="Actor" type='text' class='form-control' id='ActorText' value="jim carrey">
+  	<br/>
+    <a ng-click = "movieButton()"class='btn btn-primary btn-lg' role='button' id='searchButton'>Zoek acteur</a>
+    <br/>
+    <br/>
+    <b>films : {{ acteur }}</b>
+  </p>
+</div>

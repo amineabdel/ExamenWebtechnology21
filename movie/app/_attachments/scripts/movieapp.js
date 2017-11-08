@@ -26,9 +26,12 @@ angular.module('movieApp', ['ngRoute'])
 			/*$scope.acteur = actorVal;
 			c.log(actorVal);*/
 			
-			actorSrv.getActorList(actorVal).then(function(){
+			actorSrv.getActorList(actorVal).then(function(data){
 				c.log("test");
-				$scope.acteur = actorVal;
+
+				$scope.acteur = data;
+			 alert(data["title"]);
+				//c.log(data);
 				
 			})
 			

@@ -1,6 +1,6 @@
 'use strict'
 
-
+var ViewActor = '_view/byActor';
 var c = console; 
 c.log("movie");
 
@@ -19,7 +19,7 @@ angular.module('movieApp', ['ngRoute'])
 	})
 	
 	.controller('homeCtrl', function($scope, actorSrv) {
-		
+		;
 		$scope.Actor = "jim Carrey";
 		$scope.movieButton = function(){
 			var actorVal =  $('#ActorText').val();
@@ -28,11 +28,11 @@ angular.module('movieApp', ['ngRoute'])
 			
 			actorSrv.getActorList(actorVal).then(function(data){
 				c.log("test");
-
-				$scope.acteur = data;
-			 alert(data["title"]);
-				//c.log(data);
 				
+				$scope.acteur = data;
+	
+				
+			 	
 			})
 			
 			}
@@ -56,7 +56,6 @@ angular.module('movieApp', ['ngRoute'])
     		};
 
     })
-    
 
 		
 
